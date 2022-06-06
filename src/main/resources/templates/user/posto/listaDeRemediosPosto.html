@@ -19,23 +19,23 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr style="text-align: center" th:each="remedio : ${postoRemedios}">
-						<td th:text="${remedio.id}">User ID</td>
-						<td th:text="${remedio.name}">name</td>
+					<tr style="text-align: center" th:each="medicine : ${postoMedicines}">
+						<td th:text="${medicine.id}">User ID</td>
+						<td th:text="${medicine.name}">name</td>
 					</tr>
 				</tbody>
 			</table>		
 			
-<!-- 		<div class="card mb-3 shadow-nova" th:each="remedio : ${postoRemedios}"> -->
+<!-- 		<div class="card mb-3 shadow-nova" th:each="medicine : ${postoMedicines}"> -->
 			
 			
-<!-- 				<div class="card-header bg-secondary text-white" th:text="${remedio.name}"></div> -->
+<!-- 				<div class="card-header bg-secondary text-white" th:text="${medicine.name}"></div> -->
 			
 <!-- 				<div class="card-body"> -->
 <!-- 					<div class="row"> -->
 <!-- 						<div class="col-12"> -->
 <!-- 							<div style="text-align:center" class="mb-3"> -->
-<!-- 								<img alt="Image" th:src="@{/admin/imagem/{id}(id=${remedio.id})}" width=100% height="250" /> -->
+<!-- 								<img alt="Image" th:src="@{/admin/imagem/{id}(id=${medicine.id})}" width=100% height="250" /> -->
 <!-- 							</div> -->
 <!-- 						</div> -->
 <!-- 					</div> -->

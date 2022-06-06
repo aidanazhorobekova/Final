@@ -22,7 +22,7 @@ function onlynumber(evt) {
 		        if (
 		            (charCode > 64 && charCode < 91) || 
 		            (charCode > 96 && charCode < 123) ||
-		            (charCode > 191 && charCode <= 255) // letras com acentos
+		            (charCode > 191 && charCode <= 255)
 		        ){
 		            return true;
 		        } else {
@@ -70,7 +70,7 @@ function onlynumber(evt) {
 		function validarCPF(el){
 			  if( !_cpf(el.value) ){
 
-			    alert("CPF inválido! Insira novamente");
+			    alert("Invalid CPF! Re-enter");
 
 			    el.value = "";
 			  }

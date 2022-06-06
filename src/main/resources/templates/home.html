@@ -10,10 +10,10 @@
 			<div class="card-body">
 				<div class="row">
 					<div class="col-12 card-descricao">
-						<p>Solicite um novo medicamento</p>
+						<p>Solicite um novo medication</p>
 					</div>
 					<div class="col-12">
-						<form method="POST" th:action="@{/user/gerarPedido}" enctype="multipart/form-data">
+						<form method="POST" th:action="@{/user/gerarRequest}" enctype="multipart/form-data">
 							<button type="submit" class="btn btn-outline-primary card-button"><i class="fas fa-plus  m-2 mt-0 mb-0"></i> Nova solicitação</button>
 						</form>	
 					</div>
@@ -25,10 +25,10 @@
 			<div class="card-body">
 				<div class="row">
 					<div class="col-12 card-descricao">
-						<p>Veja seus pedidos que foram finalizados, estão em andamento ou foram recusados</p>
+						<p>Veja seus requests que foram finalizados, estão em andamento ou foram recusados</p>
 					</div>
 					<div class="col-12">
-						<a th:href="@{user/pedidos}" class="btn btn-outline-primary card-button"><i class="fas fa-list m-2 mt-0 mb-0"></i>Meus pedidos</a>
+						<a th:href="@{user/requests}" class="btn btn-outline-primary card-button"><i class="fas fa-list m-2 mt-0 mb-0"></i>Meus requests</a>
 					</div>
 				</div>
 			</div>
@@ -56,7 +56,7 @@
 						<p>Para dúvidas, sugestões e reclamações</p>
 					</div>
 					<div class="col-12">
-						<a th:href="@{comentario/homeComentarios}" class="btn btn-outline-primary card-button"><i class="fas fa-question-circle m-2 mt-0 mb-0"></i>Duvidas/Sugestões</a>
+						<a th:href="@{comment/homeComments}" class="btn btn-outline-primary card-button"><i class="fas fa-question-circle m-2 mt-0 mb-0"></i>Duvidas/Sugestões</a>
 					</div>
 				</div>
 			</div>
@@ -95,7 +95,7 @@
 						<p>Medicamentos cadastrados</p>
 					</div>
 					<div class="col-12">
-						<a th:href="@{admin/medicamentos}" class="btn btn-outline-primary card-button"><i class="fas fa-pills m-2 mt-0 mb-0"></i>Visualizar medicamentos</a>
+						<a th:href="@{admin/medications}" class="btn btn-outline-primary card-button"><i class="fas fa-pills m-2 mt-0 mb-0"></i>Visualizar medications</a>
 					</div>
 				</div>
 			</div>
@@ -118,10 +118,10 @@
 			<div class="card-body">
 				<div class="row">
 					<div class="col-12 card-descricao">
-						<p>Administrar Pedidos</p>
+						<p>Administrar Requests</p>
 					</div>
 					<div class="col-12">
-						<a th:href="@{admin/pedidosAdmin}" class="btn btn-outline-primary card-button"><i class="fas fa-list m-2 mt-0 mb-0"></i>Pedidos</a>
+						<a th:href="@{admin/requestsAdmin}" class="btn btn-outline-primary card-button"><i class="fas fa-list m-2 mt-0 mb-0"></i>Requests</a>
 					</div>
 				</div>
 			</div>
@@ -134,7 +134,7 @@
 						<p>Dúvidas/Sugestões</p>
 					</div>
 					<div class="col-12">
-						<a th:href="@{comentario/homeComentarios}" class="btn btn-outline-primary card-button"><i class="fas fa-question-circle m-2 mt-0 mb-0"></i>Dúvidas/Sugestões</a>
+						<a th:href="@{comment/homeComments}" class="btn btn-outline-primary card-button"><i class="fas fa-question-circle m-2 mt-0 mb-0"></i>Dúvidas/Sugestões</a>
 					</div>
 				</div>
 			</div>

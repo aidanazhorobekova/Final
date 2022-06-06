@@ -1,4 +1,4 @@
-package br.com.anhembi.iHealth;
+package br.com.example.iHealth;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

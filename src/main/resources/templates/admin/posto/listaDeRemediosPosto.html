@@ -9,16 +9,16 @@
 			
 			<h1 style="font-size: 1.3em" class="text-center" th:text="${posto.name}"></h1>
 			
-			<form class="mb-3 text-center welcome-text" th:action="@{/admin/associarRemedioPosto(idPosto=${posto.id})}" method="POST">
+			<form class="mb-3 text-center welcome-text" th:action="@{/admin/associarMedicinePosto(idPosto=${posto.id})}" method="POST">
 				<label><b>Remédios:</b></label>
 				<select name="id" required>
 					<option value="">Escolha o remédio</option>
-					<option th:each="remedio :  ${remedios}"
-							th:value="${remedio.id}"
-							th:text="${remedio.name}">
+					<option th:each="medicine :  ${medicines}"
+							th:value="${medicine.id}"
+							th:text="${medicine.name}">
 					</option>
 				</select>
-				<input type="submit" value="Associar remedio">
+				<input type="submit" value="Associar medicine">
 			</form>
 			
 			<table class="table table-stripped shadow-nova">
@@ -29,9 +29,9 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr style="text-align: center" th:each="remedio : ${postoRemedios}">
-						<td th:text="${remedio.id}">User ID</td>
-						<td th:text="${remedio.name}">name</td>
+					<tr style="text-align: center" th:each="medicine : ${postoMedicines}">
+						<td th:text="${medicine.id}">User ID</td>
+						<td th:text="${medicine.name}">name</td>
 					</tr>
 				</tbody>
 			</table>		

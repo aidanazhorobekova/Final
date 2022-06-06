@@ -8,15 +8,15 @@
 	<div class="container">
 
 		<h1 style="font-size: 1.3em" class="text-center mb-3">
-			Número do pedido: <span th:text="${pedido.id}"></span>
+			Número do request: <span th:text="${request.id}"></span>
 		</h1>
 
-		<form class="mb-3 text-center"th:action="@{/user/associarRemedioPedido(idPedido=${pedido.id})}"method="POST">
+		<form class="mb-3 text-center"th:action="@{/user/associarMedicineRequest(idRequest=${request.id})}"method="POST">
 			<div class="row">
 				<div class="col-7">
 					<select name="id" class="form-select card-descricao" required>
 						<option value="">Clique e solicite um remédio...</option>
-						<option th:each="remedio :  ${remedios}" th:value="${remedio.id}" th:text="${remedio.name}"></option>
+						<option th:each="medicine :  ${medicines}" th:value="${medicine.id}" th:text="${medicine.name}"></option>
 					</select> 
 				</div>
 				<div class="col-5">
@@ -31,12 +31,12 @@
 		<div class="card mb-3 shadow-nova">
 
 			<div class="card-header card-descricao"><b>Lista de remédios a serem solicitados</b></div>
-				<nav th:each="remedio : ${pedidoRemedios}" class="navbar navbar-light bg-light card-descricao p-2">
-					<span th:text="${remedio.name}"
+				<nav th:each="medicine : ${requestMedicines}" class="navbar navbar-light bg-light card-descricao p-2">
+					<span th:text="${medicine.name}"
 						class=""></span>
 					
 					<a class="navbar-brand" href="#"> <img class="p-0 m-0"
-						alt="Image" th:src="@{/user/remedio/imagem/{id}(id=${remedio.id})}"
+						alt="Image" th:src="@{/user/medicine/imagem/{id}(id=${medicine.id})}"
 						width="30" height="35" /> 
 					</a>
 					
@@ -45,8 +45,8 @@
 	
 		<hr>
 
-		<form th:object="${pedido}" class="mb-3 text-center"
-			th:action="@{/user/salvarPedido/{id}(id=${pedido.id})}" method="POST"  enctype="multipart/form-data">
+		<form th:object="${request}" class="mb-3 text-center"
+			th:action="@{/user/salvarRequest/{id}(id=${request.id})}" method="POST"  enctype="multipart/form-data">
 			
 			<input type="hidden" th:field="*{id}"/>
 			<div class=" col-12 col-sm-12">
@@ -60,8 +60,8 @@
 
 			<div class="mb-3">
 				<button type="submit" class="btn btn-outline-primary card-button mb-3"
-					style="width: 100%">Salvar pedido</button>
-				<a th:href="@{/user/cancelarPedido/{id}(id=${pedido.id})}" class="btn btn-outline-danger card-button mb-3"><i class="fas fa-ban m-2 mt-0 mb-0"></i>Cancelar</a>
+					style="width: 100%">Salvar request</button>
+				<a th:href="@{/user/cancelarRequest/{id}(id=${request.id})}" class="btn btn-outline-danger card-button mb-3"><i class="fas fa-ban m-2 mt-0 mb-0"></i>Cancelar</a>
 			</div>
 			
 		</form>

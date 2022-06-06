@@ -7,7 +7,7 @@
 		
 		<div class="container"> 
 			<div class="card shadow p-3 mb-5 bg-body rounded" >
-				<form th:object="${requisicaoNovoComentario}" class="card-body " th:action="@{/comentario/novo}" method="post">
+				<form th:object="${requisicaoNovoComment}" class="card-body " th:action="@{/comment/novo}" method="post">
 				
 				<div class="form-group">
 					<label class="form-label card-descricao" for="pergunta">Dúvida:</label>
@@ -18,7 +18,7 @@
 					<div class="row mt-2">
 						
 						<div class="col-6 d-grid ">
-							<a class="btn btn-dark card-button" th:href="@{/comentario/homeComentarios}">Return</a>
+							<a class="btn btn-dark card-button" th:href="@{/comment/homeComments}">Return</a>
 						</div>
 						
 						<div class="col-6 d-grid ">

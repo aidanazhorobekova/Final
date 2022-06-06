@@ -8,15 +8,15 @@
 		<div class="container"> 
 			<div class="card shadow p-3 mb-5 bg-body rounded" sec:authorize="hasAuthority('USER')">
 			
-			<a th:href="@{/comentario/formComentario}" class="btn btn-outline-success text-uppercase" >Fazer um comentário</a>				
+			<a th:href="@{/comment/formComment}" class="btn btn-outline-success text-uppercase" >Fazer um comentário</a>
 			</div>
 			
 			<div class="row mb-3 bg-body rounded text-uppercase" style="width:60%; margin:auto;">
 				<div  class="col-6 mt-3  d-grid mx-auto" >
-					<a th:href="@{/comentario/listarTodos}" th:classappend="${url} == 'comentarios' ? 'active'" class='btn btn-outline-primary'>Todos os comentários</a>
+					<a th:href="@{/comment/listarTodos}" th:classappend="${url} == 'comments' ? 'active'" class='btn btn-outline-primary'>Todos os comentários</a>
 				</div>
 				<div  class="col-6 mt-3   d-grid mx-auto" sec:authorize="hasAuthority('USER')" >
-					<a th:href="@{/comentario/listarPorUsuario}" th:classappend="${url} == 'comentariosUsuario' ? 'active'" class='btn btn-outline-primary'>Meus comentários</a>
+					<a th:href="@{/comment/listarPorUsuario}" th:classappend="${url} == 'commentsUsuario' ? 'active'" class='btn btn-outline-primary'>Meus comentários</a>
 				</div>
 			</div>
 			
