@@ -9,30 +9,30 @@
 		<div class="container text-center">
 		
 			<div class="mb-2">
-			<div th:if="${user.foto == null}">
-					<a th:href="@{/perfil/detalhes}" class="btn btn-outline-dark" style="border-radius: 50%"><i class="fas fa-user" style="font-size: 3em;"></i></a>
+			<div th:if="${user.photo == null}">
+					<a th:href="@{/profile/details}" class="btn btn-outline-dark" style="border-radius: 50%"><i class="fas fa-user" style="font-size: 3em;"></i></a>
 				</div>
-				<div th:if="${user.foto != null}">
-					<img class="p-0 m-0 img-perfil-grande shadow-nova-branca" alt="Image" th:src="@{/perfil/imagem/{id}(id=${user.id})}"/>
+				<div th:if="${user.photo != null}">
+					<img class="p-0 m-0 img-profile-grande shadow-nova-branca" alt="Image" th:src="@{/profile/image/{id}(id=${user.id})}"/>
 				</div>
-				<h4>Editar senha</h4>
+				<h4>Edit password</h4>
 			</div>
 				
 				
 				
-				<form class="card-body" th:action="@{/perfil/atualizarSenha}" method="post">	
+				<form class="card-body" th:action="@{/profile/updatePassword}" method="post">
 							
 					<div class="form-floating mb-3" style="text-align: left">
-						<input class="form-control shadow-nova" type="password" name="senhaField" minlength="3" maxlength="10" required/>
-						<label for="password">Insira sua senha nova</label>
+						<input class="form-control shadow-nova" type="password" name="passwordField" minlength="3" maxlength="10" required/>
+						<label for="password">Insira sua password nova</label>
 					</div>
 
 					<div class="mb-3">
-						<button type="submit" class="btn btn-outline-success card-button" style="width: 100%">Atualizar senha</button>
+						<button type="submit" class="btn btn-outline-success card-button" style="width: 100%">Update password</button>
 					</div>
 					
 					<div class="mb-3">
-						<a class="btn btn-outline-danger card-button" th:href="@{/perfil/detalhes}"  style="width: 100%">Return</a>
+						<a class="btn btn-outline-danger card-button" th:href="@{/profile/details}"  style="width: 100%">Return</a>
 					</div>
 			</form>
 		</div>

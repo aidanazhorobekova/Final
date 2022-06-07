@@ -17,10 +17,10 @@
 		rel="stylesheet"
 		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 		crossorigin="anonymous" />
-	<link rel="icon" type="imagem/png" href="/imagens/logo.jpg" />
+	<link rel="icon" type="image/png" href="/images/logo.jpg" />
 	<script src="https://kit.fontawesome.com/55cdf805a8.js" crossorigin="anonymous"></script>
-	<link href="../estilo.css" rel="stylesheet">
-	<link href="../static/estilo.css" rel="stylesheet">
+	<link href="../style.css" rel="stylesheet">
+	<link href="../static/style.css" rel="stylesheet">
 	
 </head>
 
@@ -28,8 +28,8 @@
 
 	<nav class="bg-success mb-3 p-2" style="color: white">
 		<div class="text-center">
-			<a th:href="@{/home}" class="header-title">Delivery of MEDICINE<i
-				class="fas fa-laptop-medical m-2 mt-0 mb-0"></i></a>
+			<a th:href="@{/home}" class="header-title">Delivery of MEDICINE
+				<img src="resources/static/images/logo.jpg" alt="AIU"></a>
 		</div>
 	</nav>
 
@@ -50,7 +50,7 @@
 					<div class="form-floating mb-3">
 						<input name="password" type="password"
 							class="form-control shadow-nova card-descricao"
-							placeholder="digite a sua senha..." maxlength="10"> <label
+							placeholder="digite a sua password..." maxlength="10"> <label
 							for="password">Password</label>
 					</div>
 
@@ -64,7 +64,7 @@
 								type="submit" style="width: 100%">Log in</button>
 						</div>
 						<div class="col-6">
-							<a th:href="@{/user/login/registationForm}"
+							<a th:href="@{/user/login/registrationForm}"
 								class="btn btn-outline-primary card-button" style="width: 100%">Register</a>
 						</div>
 

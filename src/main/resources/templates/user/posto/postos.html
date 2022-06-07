@@ -8,28 +8,28 @@
 	<div class="container">
 			
 			<a class="btn btn-outline-dark card-button mb-3 shadow-nova" th:href="@{/home}" style="width: 100%">Return</a>
-		<div class="text-center" th:each="posto : ${postos}">
+		<div class="text-center" th:each="post : ${posts}">
 			<div class="row">
 				<div class="col-12">
-					<p th:text="${posto.name}" style="font-weight: bold; text-align: center; margin: 0;" >name do Posto</p>
+					<p th:text="${post.name}" style="font-weight: bold; text-align: center; margin: 0;" >name do Post</p>
 				</div>
 				<div class="col-12 mb-2" >
-					<p th:text="${posto.address}" class="card-descricao" style="text-align: center; margin: 0;" >Região do posto</p>
+					<p th:text="${post.address}" class="card-descricao" style="text-align: center; margin: 0;" >Região do post</p>
 				</div>
 				<div class="col-12 mb-2"> 
 					<div class="row">
 						<div style="text-align:center" class="col-6 m-0">
-							<img class="posto-img-maps" alt="Image" th:src="@{/user/imagemPosto/{id}(id=${posto.id})}" width=100% height="150" />
+							<img class="post-img-maps" alt="Image" th:src="@{/user/imagePost/{id}(id=${post.id})}" width=100% height="150" />
 						</div>
 						<div class="col-6 m-0">
-							<iframe class="posto-img-maps" th:src="${posto.urlMapa}" width=100% height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							<iframe class="post-img-maps" th:src="${post.urlMapa}" width=100% height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 						</div>
 					</div>
 					
 			
 				</div>
 				<div class="col-12 mb-2">
-					<a th:href="@{/user/listaDeMedicines/{id}(id=${posto.id})}" class="btn btn-outline-success card-button"><i class="fas fa-pills m-2 mt-0 mb-0"></i>Visualizar medications disponíveis</a>
+					<a th:href="@{/user/listaDeMedicines/{id}(id=${post.id})}" class="btn btn-outline-success card-button"><i class="fas fa-pills m-2 mt-0 mb-0"></i>Visualizar medications disponíveis</a>
 				</div>
 		
 				</div>
@@ -48,44 +48,44 @@
 								</li>
 								
 								<li th:if="${currentPage > 1}"  class="page-item">
-									<a th:href="@{/user/postos/1}" class="page-link ">Primeira</a>
+									<a th:href="@{/user/posts/1}" class="page-link ">Primeira</a>
 								</li>
 								<li th:unless="${currentPage > 1}" class="page-item disabled">
 									<span class="page-link">Primeira</span>
 								</li>
 								
 							    <li th:if="${currentPage > 1}"  class="page-item">
-									<a class="page-link" th:href="@{'/user/postos/' + ${currentPage - 1}}" aria-label="Previous">
+									<a class="page-link" th:href="@{'/user/posts/' + ${currentPage - 1}}" aria-label="Previous">
 								        <span aria-hidden="true">&laquo;</span>
 								        <span class="sr-only">Previous</span>
 								     </a>
 								</li>
 								<li th:unless="${currentPage > 1}" class="page-item disabled">
-									<a class="page-link card-descricao welcome-text" th:href="@{'/user/postos/' + ${currentPage - 1}}" aria-label="Previous">
+									<a class="page-link card-descricao welcome-text" th:href="@{'/user/posts/' + ${currentPage - 1}}" aria-label="Previous">
 								        <span aria-hidden="true">&laquo;</span>
 								        <span class="sr-only ">Previous</span>
 								     </a>
 								</li>
 								
 							    <li class="page-item" th:each="i : ${#numbers.sequence(1, totalPages)}" th:classappend="${currentPage} == ${i} ? 'active'">
-									<a  th:href="@{'/user/postos/' + ${i}}" class="page-link ">[[${i}]]</a>
+									<a  th:href="@{'/user/posts/' + ${i}}" class="page-link ">[[${i}]]</a>
 							    </li>
 							    
 							    <li th:if="${currentPage < totalPages}" class="page-item">
-									<a class="page-link" th:href="@{'/user/postos/' + ${currentPage + 1}}" aria-label="Next">
+									<a class="page-link" th:href="@{'/user/posts/' + ${currentPage + 1}}" aria-label="Next">
      								   <span aria-hidden="true">&raquo;</span>
 								        <span class="sr-only">Next</span>
 								     </a>
 								</li>
 								<li th:unless="${currentPage < totalPages}" class="page-item disabled">
-									<a class="page-link" th:href="@{'/user/postos/' + ${currentPage + 1}}" aria-label="Next">
+									<a class="page-link" th:href="@{'/user/posts/' + ${currentPage + 1}}" aria-label="Next">
      								   <span aria-hidden="true">&raquo;</span>
 								        <span class="sr-only">Next</span>
 								     </a>
 								</li>
 								
 								<li th:if="${currentPage < totalPages}" class="page-item">
-									<a  th:href="@{'/user/postos/' + ${totalPages}}" class="page-link ">Últ</a>
+									<a  th:href="@{'/user/posts/' + ${totalPages}}" class="page-link ">Últ</a>
 								</li>
 								<li th:unless="${currentPage < totalPages}" class="page-item disabled">
 									<span class="page-link">Últ</span>

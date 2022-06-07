@@ -19,7 +19,7 @@
 					<span th:text="${medicine.name}" class=""></span>
 					
 					<a class="navbar-brand" href="#"> <img class="p-0 m-0"
-						alt="Image" th:src="@{/user/medicine/imagem/{id}(id=${medicine.id})}"
+						alt="Image" th:src="@{/user/medicine/image/{id}(id=${medicine.id})}"
 						width="35" height="35" /> 
 					</a>
 				</nav>
@@ -28,7 +28,7 @@
 		<div class="card mb-3">
 			<div class="card-header"><b>Receita médica a ser avaliada:</b></div>
 				<div class="card-body text-center">
-					<img class="img-receita-detalhe" alt="Image" th:src="@{/user/imagem/{id}(id=${request.id})}" width=100% height="250" />
+					<img class="img-receita-detalhe" alt="Image" th:src="@{/user/image/{id}(id=${request.id})}" width=100% height="250" />
 				</div>
 			</div>		
 	</div>

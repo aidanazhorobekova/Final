@@ -19,14 +19,14 @@
 					<span th:text="${medicine.name}" class=""></span>
 					
 					<a class="navbar-brand" href="#"> <img class="p-0 m-0"
-						alt="Image" th:src="@{/admin/imagem/{id}(id=${medicine.id})}"
+						alt="Image" th:src="@{/admin/image/{id}(id=${medicine.id})}"
 						width="30" height="35" /> 
 					</a>
 				</nav>
 		</div>
 		
 		<div style="text-align:center" class="mb-3">
-			<img class="img-receita-detalhe" alt="Image" th:src="@{/user/imagem/{id}(id=${request.id})}" width=100% height="300" />
+			<img class="img-receita-detalhe" alt="Image" th:src="@{/user/image/{id}(id=${request.id})}" width=100% height="300" />
 			<p>Status atual:  <b><span th:text="${request.status.name}"></span></b></p>
 		</div>		
 		
@@ -36,7 +36,7 @@
 			<input type="hidden" th:field="*{id}"/>
 			<div class="form-group row mb-3">
 				<div class="col-12" style="text-align: left">
-					<label class="col-form-label" for="statusFile">Defina o novo status desse request</label>
+					<label class="col-form-label" for="statusFile">Defina o new status desse request</label>
 				</div>	
 				<div>
 					<select class="form-select shadow-nova" name="status"  required>
@@ -47,7 +47,7 @@
 			</div>
 			
 			<div class="mb-3">
-				<button type="submit" class="btn btn-outline-primary card-button shadow-nova"	style="width: 100%">Atualizar status</button>
+				<button type="submit" class="btn btn-outline-primary card-button shadow-nova"	style="width: 100%">Update status</button>
 			</div>
 		</form>
 		

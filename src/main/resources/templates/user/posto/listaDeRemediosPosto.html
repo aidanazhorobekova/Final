@@ -7,9 +7,9 @@
 	
 	<div class="container">
 		
-			<a th:href="@{/user/postos}" class="btn btn-outline-dark card-button shadow-nova mb-3">Return para lista de postos</a>
+			<a th:href="@{/user/posts}" class="btn btn-outline-dark card-button shadow-nova mb-3">Return para lista de posts</a>
 			
-			<h1 style="font-size: 1.3em" class="text-center" th:text="${posto.name}"></h1>
+			<h1 style="font-size: 1.3em" class="text-center" th:text="${post.name}"></h1>
 				
 			<table class="table table-stripped shadow-nova">
 				<thead class="table-light">
@@ -19,14 +19,14 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr style="text-align: center" th:each="medicine : ${postoMedicines}">
+					<tr style="text-align: center" th:each="medicine : ${postMedicines}">
 						<td th:text="${medicine.id}">User ID</td>
 						<td th:text="${medicine.name}">name</td>
 					</tr>
 				</tbody>
 			</table>		
 			
-<!-- 		<div class="card mb-3 shadow-nova" th:each="medicine : ${postoMedicines}"> -->
+<!-- 		<div class="card mb-3 shadow-nova" th:each="medicine : ${postMedicines}"> -->
 			
 			
 <!-- 				<div class="card-header bg-secondary text-white" th:text="${medicine.name}"></div> -->
@@ -35,7 +35,7 @@
 <!-- 					<div class="row"> -->
 <!-- 						<div class="col-12"> -->
 <!-- 							<div style="text-align:center" class="mb-3"> -->
-<!-- 								<img alt="Image" th:src="@{/admin/imagem/{id}(id=${medicine.id})}" width=100% height="250" /> -->
+<!-- 								<img alt="Image" th:src="@{/admin/image/{id}(id=${medicine.id})}" width=100% height="250" /> -->
 <!-- 							</div> -->
 <!-- 						</div> -->
 <!-- 					</div> -->

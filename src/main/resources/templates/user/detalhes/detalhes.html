@@ -10,15 +10,15 @@
 		
 			<div class="mb-3 mt-2">
 			
-				<div th:if="${user.foto == null}">
-					<a th:href="@{/perfil/detalhes}" class="btn btn-outline-dark" style="border-radius: 50%"><i class="fas fa-user" style="font-size: 3em;"></i></a>
+				<div th:if="${user.photo == null}">
+					<a th:href="@{/profile/details}" class="btn btn-outline-dark" style="border-radius: 50%"><i class="fas fa-user" style="font-size: 3em;"></i></a>
 				</div>
-				<div th:if="${user.foto != null}">
-					<img class="p-0 m-0 img-perfil-grande shadow-nova-branca" alt="Image" th:src="@{/perfil/imagem/{id}(id=${user.id})}"/>
+				<div th:if="${user.photo != null}">
+					<img class="p-0 m-0 img-profile-grande shadow-nova-branca" alt="Image" th:src="@{/profile/image/{id}(id=${user.id})}"/>
 				</div>
 				
 				
-				<h4>Meu perfil</h4>
+				<h4>Meu profile</h4>
 			</div>
 			
 				<div class="card-body">	
@@ -55,24 +55,24 @@
 							
 					<div class="form-floating mb-3" style="text-align: left">
 						<input class="form-control shadow-nova" type="text" th:value="${user.password}"  readonly="readonly"/>
-						<label for="password">Senha</label>
+						<label for="password">Password</label>
 					</div>
 					
 					<div class="form-floating mb-3" style="text-align: left">
-						<input class="form-control shadow-nova" type="text" th:value="${user.regiao.name}"  readonly="readonly"/>
-						<label for="regiao">Região</label>
+						<input class="form-control shadow-nova" type="text" th:value="${user.region.name}"  readonly="readonly"/>
+						<label for="region">Região</label>
 					</div>
 						
 					<div class="mb-3">
-						<a class="btn btn-outline-primary card-button" th:href="@{/perfil/editar}" style="width: 100%">Editar dados pessoais</a>
+						<a class="btn btn-outline-primary card-button" th:href="@{/profile/edit}" style="width: 100%">Edit dados pessoais</a>
 					</div>
 					
 					<div class="mb-3">
-						<a class="btn btn-outline-primary card-button" th:href="@{/perfil/editarSenha}" style="width: 100%">Alterar senha</a>
+						<a class="btn btn-outline-primary card-button" th:href="@{/profile/editPassword}" style="width: 100%">Alterar password</a>
 					</div>
 					
 					<div class="mb-3">
-						<a class="btn btn-outline-primary card-button" th:href="@{/perfil/editarFoto}" style="width: 100%">Alterar foto de perfil</a>
+						<a class="btn btn-outline-primary card-button" th:href="@{/profile/editPhoto}" style="width: 100%">Alterar photo de profile</a>
 					</div>
 					
 					<div class="mb-3">

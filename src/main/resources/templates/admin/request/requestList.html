@@ -40,12 +40,12 @@
 				<div class="card-body text-center">
 					<p>Status: <b><span th:text="${request.status.name}"></span></b></p>
 					
-					<img class="mb-3 img-receita" alt="Image" th:src="@{/user/imagem/{id}(id=${request.id})}" width="300" height="210" />
+					<img class="mb-3 img-receita" alt="Image" th:src="@{/user/image/{id}(id=${request.id})}" width="300" height="210" />
 					
 					<a th:href="@{/admin/detalheRequest/{id}(id=${request.id})}" class="btn btn-outline-dark card-button mb-3"><i class="fas fa-pen edit-icon text-white m-2 mt-0 mb-0"></i>Analisar e alterar situação do request</a>
 					<div th:switch="${request.status.name}">
 						<div th:case="'EM ANALISE'">
-							<a th:href="@{/admin/excluirRequest/{id}(id=${request.id})}" class="btn card-button "><i class="fas fa-trash delete-icon"></i></a>
+							<a th:href="@{/admin/excludeRequest/{id}(id=${request.id})}" class="btn card-button "><i class="fas fa-trash delete-icon"></i></a>
 						</div>
 					</div>
 				</div>

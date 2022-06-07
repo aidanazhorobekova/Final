@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head th:replace="~{templates :: head}"></head>
+	<body>
+
+	<div th:replace="~{templates :: header}"></div>
+	
+	<div class="container">
+			
+			<h1 style="font-size: 1.3em" class="text-center" th:text="${post.name}"></h1>
+			
+			<form class="mb-3 text-center welcome-text" th:action="@{/admin/associarMedicinePost(idPost=${post.id})}" method="POST">
+				<label><b>Remédios:</b></label>
+				<select name="id" required>
+					<option value="">Escolha o remédio</option>
+					<option th:each="medicine :  ${medicines}"
+							th:value="${medicine.id}"
+							th:text="${medicine.name}">
+					</option>
+				</select>
+				<input type="submit" value="Associar medicine">
+			</form>
+			
+			<table class="table table-stripped shadow-nova">
+				<thead class="table-light">
+					<tr style="text-align: center">
+						<th scope="col">Id</th>
+						<th scope="col">name</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr style="text-align: center" th:each="medicine : ${postMedicines}">
+						<td th:text="${medicine.id}">User ID</td>
+						<td th:text="${medicine.name}">name</td>
+					</tr>
+				</tbody>
+			</table>		
+			
+			<a th:href="@{/admin/posts}" class="btn btn-outline-dark card-button shadow-nova mb-3">Return para lista de posts</a>
+	</div>
+	
+	<footer th:replace="~{templates :: footer}"></footer>
+	
+	
+</body>
+</html>

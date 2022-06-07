@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:sec="http://www.w3.org/1999/xhtml">
 	<head th:replace="~{templates :: head}"></head>
 	<body>
 
@@ -10,12 +10,13 @@
 			<div class="card-body">
 				<div class="row">
 					<div class="col-12 card-descricao">
-						<p>Solicite um novo medication</p>
+						<p>Request a new medication</p>
 					</div>
 					<div class="col-12">
-						<form method="POST" th:action="@{/user/gerarRequest}" enctype="multipart/form-data">
-							<button type="submit" class="btn btn-outline-primary card-button"><i class="fas fa-plus  m-2 mt-0 mb-0"></i> Nova solicitação</button>
-						</form>	
+						<form method="POST" th:action="@{/user/generateRequest}" enctype="multipart/form-data">
+							<button type="submit" class="btn btn-outline-primary card-button"><i class="fas fa-plus  m-2 mt-0 mb-0"></i>
+								New request</button>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -25,10 +26,11 @@
 			<div class="card-body">
 				<div class="row">
 					<div class="col-12 card-descricao">
-						<p>Veja seus requests que foram finalizados, estão em andamento ou foram recusados</p>
+						<p>See your requests that have been completed, in progress or have been declined</p>
 					</div>
 					<div class="col-12">
-						<a th:href="@{user/requests}" class="btn btn-outline-primary card-button"><i class="fas fa-list m-2 mt-0 mb-0"></i>Meus requests</a>
+						<a th:href="@{user/requests}" class="btn btn-outline-primary card-button"><i class="fas fa-list m-2 mt-0 mb-0"></i>
+							My requests</a>
 					</div>
 				</div>
 			</div>
@@ -38,10 +40,12 @@
 			<div class="card-body">
 				<div class="row">
 					<div class="col-12 card-descricao">
-						<p>Veja os postos localizados na sua região</p>
+						<p>
+							See the stations located in your region</p>
 					</div>
 					<div class="col-12">
-						<a  th:href="@{user/postos}" class="btn btn-outline-primary card-button"><i class="fas fa-map m-2 mt-0 mb-0"></i>Postos próximos</a>
+						<a  th:href="@{user/posts}" class="btn btn-outline-primary card-button"><i class="fas fa-map m-2 mt-0 mb-0"></i>
+							Nearby stations</a>
 					</div>
 				</div>
 			</div>
@@ -53,10 +57,12 @@
 			<div class="card-body">
 				<div class="row">
 					<div class="col-12 card-descricao">
-						<p>Para dúvidas, sugestões e reclamações</p>
+						<p>
+							For questions, suggestions and complaints</p>
 					</div>
 					<div class="col-12">
-						<a th:href="@{comment/homeComments}" class="btn btn-outline-primary card-button"><i class="fas fa-question-circle m-2 mt-0 mb-0"></i>Duvidas/Sugestões</a>
+						<a th:href="@{comment/homeComments}" class="btn btn-outline-primary card-button"><i class="fas fa-question-circle m-2 mt-0 mb-0"></i>
+							Doubts/Suggestions</a>
 					</div>
 				</div>
 			</div>
@@ -66,10 +72,10 @@
 			<div class="card-body">
 				<div class="row">
 					<div class="col-12 card-descricao">
-						<p>Usuários cadastrados</p>
+						<p>Registered users</p>
 					</div>
 					<div class="col-12">
-						<a th:href="@{admin/usuarios}" class="btn btn-outline-primary card-button"><i class="fas fa-user m-2 mt-0 mb-0"></i></i>Visualizar usuários</a>
+						<a th:href="@{admin/users}" class="btn btn-outline-primary card-button"><i class="fas fa-user m-2 mt-0 mb-0"></i></i>View users</a>
 					</div>
 				</div>
 			</div>
@@ -79,10 +85,10 @@
 			<div class="card-body">
 				<div class="row">
 					<div class="col-12 card-descricao">
-						<p>Postos cadastrados</p>
+						<p>Registered posts</p>
 					</div>
 					<div class="col-12">
-						<a th:href="@{/admin/postos}" class="btn btn-outline-primary card-button"><i class="fas fa-building m-2 mt-0 mb-0"></i>Visualizar postos</a>
+						<a th:href="@{/admin/posts}" class="btn btn-outline-primary card-button"><i class="fas fa-building m-2 mt-0 mb-0"></i>View posts</a>
 					</div>
 				</div>
 			</div>
@@ -92,10 +98,10 @@
 			<div class="card-body">
 				<div class="row">
 					<div class="col-12 card-descricao">
-						<p>Medicamentos cadastrados</p>
+						<p>Registered medications</p>
 					</div>
 					<div class="col-12">
-						<a th:href="@{admin/medications}" class="btn btn-outline-primary card-button"><i class="fas fa-pills m-2 mt-0 mb-0"></i>Visualizar medications</a>
+						<a th:href="@{admin/medications}" class="btn btn-outline-primary card-button"><i class="fas fa-pills m-2 mt-0 mb-0"></i>View medications</a>
 					</div>
 				</div>
 			</div>
@@ -105,10 +111,10 @@
 			<div class="card-body">
 				<div class="row">
 					<div class="col-12 card-descricao">
-						<p>Regiões cadastradas</p>
+						<p>Registered regions</p>
 					</div>
 					<div class="col-12">
-						<a th:href="@{admin/regioes}" class="btn btn-outline-primary card-button"><i class="fas fa-map-pin m-2 mt-0 mb-0"></i>Visualizar regiões</a>
+						<a th:href="@{admin/regions}" class="btn btn-outline-primary card-button"><i class="fas fa-map-pin m-2 mt-0 mb-0"></i>View regions</a>
 					</div>
 				</div>
 			</div>
@@ -118,7 +124,7 @@
 			<div class="card-body">
 				<div class="row">
 					<div class="col-12 card-descricao">
-						<p>Administrar Requests</p>
+						<p>Manage requests</p>
 					</div>
 					<div class="col-12">
 						<a th:href="@{admin/requestsAdmin}" class="btn btn-outline-primary card-button"><i class="fas fa-list m-2 mt-0 mb-0"></i>Requests</a>
@@ -131,10 +137,10 @@
 			<div class="card-body">
 				<div class="row">
 					<div class="col-12 card-descricao">
-						<p>Dúvidas/Sugestões</p>
+						<p>Questions/Suggestions</p>
 					</div>
 					<div class="col-12">
-						<a th:href="@{comment/homeComments}" class="btn btn-outline-primary card-button"><i class="fas fa-question-circle m-2 mt-0 mb-0"></i>Dúvidas/Sugestões</a>
+						<a th:href="@{comment/homeComments}" class="btn btn-outline-primary card-button"><i class="fas fa-question-circle m-2 mt-0 mb-0"></i>Questions/Suggestions</a>
 					</div>
 				</div>
 			</div>

@@ -9,34 +9,34 @@
 		<div class="container text-center">
 		
 			<div class="mb-2">
-			<div th:if="${user.foto == null}">
-					<a th:href="@{/perfil/detalhes}" class="btn btn-outline-dark" style="border-radius: 50%"><i class="fas fa-user" style="font-size: 3em;"></i></a>
+			<div th:if="${user.photo == null}">
+					<a th:href="@{/profile/details}" class="btn btn-outline-dark" style="border-radius: 50%"><i class="fas fa-user" style="font-size: 3em;"></i></a>
 				</div>
-				<div th:if="${user.foto != null}">
-					<img class="p-0 m-0 img-perfil-grande shadow-nova-branca" alt="Image" th:src="@{/perfil/imagem/{id}(id=${user.id})}"/>
+				<div th:if="${user.photo != null}">
+					<img class="p-0 m-0 img-profile-grande shadow-nova-branca" alt="Image" th:src="@{/profile/image/{id}(id=${user.id})}"/>
 				</div>
-				<h4>Editar senha</h4>
+				<h4>Edit password</h4>
 			</div>
 				
 				
 				
-				<form class="card-body" th:action="@{/perfil/atualizarFoto}" method="post" enctype="multipart/form-data">	
+				<form class="card-body" th:action="@{/profile/updatePhoto}" method="post" enctype="multipart/form-data">
 							
 					<div class="form-group row mb-3" style="text-align: left">
 						<div class=" col-12 col-sm-12">
-							<label class="col-form-label" for="foto">Nova foto de perfil</label>
+							<label class="col-form-label" for="photo">Nova photo de profile</label>
 						</div>
 						<div class="col-12 col-sm-12">
-							<input class="form-control  shadow-nova" type="file" id="foto" name="fotoFile" required/>
+							<input class="form-control  shadow-nova" type="file" id="photo" name="photoFile" required/>
 						</div>
 					</div>
 
 					<div class="mb-3">
-						<button type="submit" class="btn btn-outline-success card-button" style="width: 100%">Atualizar foto</button>
+						<button type="submit" class="btn btn-outline-success card-button" style="width: 100%">Update photo</button>
 					</div>
 					
 					<div class="mb-3">
-						<a class="btn btn-outline-danger card-button" th:href="@{/perfil/detalhes}"  style="width: 100%">Return</a>
+						<a class="btn btn-outline-danger card-button" th:href="@{/profile/details}"  style="width: 100%">Return</a>
 					</div>
 			</form>
 		</div>

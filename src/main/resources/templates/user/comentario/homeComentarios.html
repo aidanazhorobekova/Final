@@ -37,7 +37,7 @@
 						</div>
 						
 						<div sec:authorize="hasAuthority('ADMIN')">
-							<a th:href="@{/comment/excluir/{id}(id=${comment.id})}" class="trash "  ><i class="fas fa-trash "></i></a>
+							<a th:href="@{/comment/exclude/{id}(id=${comment.id})}" class="trash "  ><i class="fas fa-trash "></i></a>
 						</div>
 					</div>
 					

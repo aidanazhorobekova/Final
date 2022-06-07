@@ -9,18 +9,18 @@
 		<div class="container text-center">
 		
 			<div class="mb-2">
-				<div th:if="${user.foto == null}">
-					<a th:href="@{/perfil/detalhes}" class="btn btn-outline-dark" style="border-radius: 50%"><i class="fas fa-user" style="font-size: 3em;"></i></a>
+				<div th:if="${user.photo == null}">
+					<a th:href="@{/profile/details}" class="btn btn-outline-dark" style="border-radius: 50%"><i class="fas fa-user" style="font-size: 3em;"></i></a>
 				</div>
-				<div th:if="${user.foto != null}">
-					<img class="p-0 m-0 img-perfil-grande shadow-nova-branca" alt="Image" th:src="@{/perfil/imagem/{id}(id=${user.id})}"/>
+				<div th:if="${user.photo != null}">
+					<img class="p-0 m-0 img-profile-grande shadow-nova-branca" alt="Image" th:src="@{/profile/image/{id}(id=${user.id})}"/>
 				</div>
-				<h4>Editar dados pessoais</h4>
+				<h4>Edit dados pessoais</h4>
 			</div>
 				
 				
 				
-				<form class="card-body"th:object="${user}" th:action="@{/perfil/atualizar}" method="post" enctype="multipart/form-data">	
+				<form class="card-body"th:object="${user}" th:action="@{/profile/update}" method="post" enctype="multipart/form-data">
 					<input class="form-control shadow-nova" type="hidden" th:field="*{id}" name="id" />
 					
 					<div class="form-floating mb-3" style="text-align: left">
@@ -55,19 +55,19 @@
 					</div>
 							
 					<div class="form-floating mb-3"style="text-align: left">
-						<select class="form-select shadow-nova mb-3" name="regiaoField" required>
-							<option class="text-transparent" th:text="${user.regiao.name}" selected></option>
-							<option  th:each="regiao : ${regioes}" th:text="${regiao.name}" ></option>
+						<select class="form-select shadow-nova mb-3" name="regionField" required>
+							<option class="text-transparent" th:text="${user.region.name}" selected></option>
+							<option  th:each="region : ${regions}" th:text="${region.name}" ></option>
 						</select>	
 						<label class="col-form-label">Região</label>
 					</div>
 						
 					<div class="mb-3">
-						<button type="submit" class="btn btn-outline-success card-button" style="width: 100%">Atualizar dados pessoais</button>
+						<button type="submit" class="btn btn-outline-success card-button" style="width: 100%">Update dados pessoais</button>
 					</div>
 					
 					<div class="mb-3">
-						<a class="btn btn-outline-danger card-button" th:href="@{/perfil/detalhes}"  style="width: 100%">Return</a>
+						<a class="btn btn-outline-danger card-button" th:href="@{/profile/details}"  style="width: 100%">Return</a>
 					</div>
 			</form>
 		</div>

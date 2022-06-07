@@ -36,7 +36,7 @@
 						class=""></span>
 					
 					<a class="navbar-brand" href="#"> <img class="p-0 m-0"
-						alt="Image" th:src="@{/user/medicine/imagem/{id}(id=${medicine.id})}"
+						alt="Image" th:src="@{/user/medicine/image/{id}(id=${medicine.id})}"
 						width="30" height="35" /> 
 					</a>
 					
@@ -51,7 +51,7 @@
 			<input type="hidden" th:field="*{id}"/>
 			<div class=" col-12 col-sm-12">
 				<label class="col-form-label card-descricao" for="anexo">Anexe
-					a imagem da receita médica (obrigatório)</label>
+					a image da receita médica (obrigatório)</label>
 			</div>
 			<div class="col-12 col-sm-12 mb-3">
 				<input class="form-control card-descricao  shadow-nova" type="file" id="anexo"

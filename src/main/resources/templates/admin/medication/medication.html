@@ -21,14 +21,14 @@
 							<div class="row">
 								<div class="col-12">
 									<div style="text-align:center" class="mb-3">
-										<img class="img-medication" alt="Image" th:src="@{/admin/imagem/{id}(id=${medicine.id})}" width=60% height="180" />
+										<img class="img-medication" alt="Image" th:src="@{/admin/image/{id}(id=${medicine.id})}" width=60% height="180" />
 									</div>
 								</div>
 								<div class="col-6">
-									<a th:href="@{/admin/editarMedicamento/{id}(id=${medicine.id})}" class="btn btn-outline-light card-button shadow-nova"><i class="fas fa-pen edit-icon"></i></a>
+									<a th:href="@{/admin/editMedication/{id}(id=${medicine.id})}" class="btn btn-outline-light card-button shadow-nova"><i class="fas fa-pen edit-icon"></i></a>
 								</div>
 								<div class="col-6">
-									<a th:href="@{/admin/deletarMedicamento/{id}(id=${medicine.id})}" class="btn btn-outline-light card-button shadow-nova"><i class="fas fa-trash delete-icon"></i></a>
+									<a th:href="@{/admin/deleteMedication/{id}(id=${medicine.id})}" class="btn btn-outline-light card-button shadow-nova"><i class="fas fa-trash delete-icon"></i></a>
 								</div>
 								
 							</div>

@@ -8,13 +8,13 @@
 	<div class="container">
 
 		<div class="text-center">
-			<h4>Atualizar medication</h4>
+			<h4>Update medication</h4>
 		</div>
 
 		<div class="card shadow-nova">
 			<div class="card-body">
 				<form th:object="${medication}" method="POST"
-					th:action="@{/admin/atualizarMedicamento}" enctype="multipart/form-data">
+					th:action="@{/admin/updateMedication}" enctype="multipart/form-data">
 					<div>
 						<input class="form-control" type="hidden" th:field="*{id}" />
 
@@ -33,13 +33,13 @@
 								<label class="col-form-label">Imagem do medication</label>
 							</div>
 							<div class="col-12 col-sm-12">
-								<input class="form-control  shadow-nova" type="file" id="imagem" name="imagemFile" required/>
+								<input class="form-control  shadow-nova" type="file" id="image" name="imageFile" required/>
 							</div>
 						</div>
 		
 						<div class="mb-3">
 							<button type="submit" class="btn btn-outline-primary card-button  shadow-nova"
-								style="width: 100%">Atualizar</button>
+								style="width: 100%">Update</button>
 						</div>
 
 						<div class="mb-3">

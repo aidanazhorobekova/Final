@@ -12,7 +12,7 @@
 		</div>
 		<div class="card shadow-nova">
 			<div class="card-body">
-				<form th:object="${medicine}" method="POST" th:action="@{/admin/cadastrarMedicamento}" enctype="multipart/form-data">
+				<form th:object="${medicine}" method="POST" th:action="@{/admin/cadastrarMedication}" enctype="multipart/form-data">
 					<div>
 					<input type="hidden" th:field="*{id}"/>
 						<div class="form-group row mb-3 ">
@@ -28,10 +28,10 @@
 						</div>
 						<div class="form-group row mb-3">
 							<div class=" col-12 col-sm-12">
-								<label class="col-form-label" for="imagem">Imagem do medication</label>
+								<label class="col-form-label" for="image">Imagem do medication</label>
 							</div>
 							<div class="col-12 col-sm-12">
-								<input class="form-control  shadow-nova" type="file" id="imagem" name="imagemFile" required/>
+								<input class="form-control  shadow-nova" type="file" id="image" name="imageFile" required/>
 							</div>
 						</div>
 						<div class="mb-3">
