@@ -73,8 +73,8 @@ public class CommentController {
 		return "user/comment/homeComments";
 	}
 	
-	@GetMapping("listarPorUsuario")
-	public String listarPorUsuario(RequestNewComment request, Model model, Principal principal) {
+	@GetMapping("listarPorUser")
+	public String listarPorUser(RequestNewComment request, Model model, Principal principal) {
 		
 		String username = principal.getName();
 		model.addAttribute("username", username);
@@ -86,11 +86,11 @@ public class CommentController {
 		List<Comment> comments = commentRepository.findAllByUser(user,Sort.by("id").descending());
 		model.addAttribute("comments", comments);
 		
-		String url = "commentsUsuario";
+		String url = "commentsUser";
 		 model.addAttribute("url", url);
 		if(comments.isEmpty() || comments.size() == 0) {
 			
-			return "user/comment/homeVaziaCommentsUsuario";
+			return "user/comment/homeVaziaCommentsUser";
 		}
 		return "user/comment/homeComments";
 	}

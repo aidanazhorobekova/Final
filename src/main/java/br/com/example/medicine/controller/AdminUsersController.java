@@ -42,7 +42,7 @@ public class AdminUsersController {
 		
 		List<User> users = userRepository.findAll();
 		model.addAttribute("users", users);
-		return "admin/users/listaUsuarios";
+		return "admin/users/listaUsers";
 	}
 
 	

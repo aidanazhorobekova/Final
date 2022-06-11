@@ -32,7 +32,7 @@ public class User {
 	private String last_name;
 	
 	@Column(nullable = false, unique = true, length = 20)
-	private String codSus;
+	private String medcard;
 	
 	@Column(nullable = false, unique = true,length = 100)
 	private String email;
@@ -86,12 +86,12 @@ public class User {
 		this.last_name = last_name;
 	}
 
-	public String getCodSus() {
-		return codSus;
+	public String getMedCard() {
+		return medcard;
 	}
 
-	public void setCodSus(String codSus) {
-		this.codSus = codSus;
+	public void setMedCard(String medcard) {
+		this.medcard = medcard;
 	}
 
 	public String getEmail() {

@@ -21,7 +21,7 @@
 					<a th:href="@{/comment/listarTodos}" th:classappend="${url} == 'comments' ? 'active'" class='btn btn-outline-primary card-descricao card-button'>Todos os comentários</a>
 				</div>
 				<div  class="col-12 col-md-12 col-lg-6 mt-3   d-grid mx-auto" sec:authorize="hasAuthority('USER')" >
-					<a th:href="@{/comment/listarPorUsuario}" th:classappend="${url} == 'commentsUsuario' ? 'active'" class='btn btn-outline-primary card-descricao card-button'>Meus comentários</a>
+					<a th:href="@{/comment/listarPorUser}" th:classappend="${url} == 'commentsUser' ? 'active'" class='btn btn-outline-primary card-descricao card-button'>Meus comentários</a>
 				</div>
 			</div>
 						

@@ -21,7 +21,7 @@ public class UserForm {
 	
 	@NotBlank
 	@Length(min = 15, max=15)
-	private String codSus;
+	private String medcard;
 	
 	@NotBlank
 	@Length(min = 8, max=50)
@@ -59,12 +59,12 @@ public class UserForm {
 		this.last_name = last_name;
 	}
 
-	public String getCodSus() {
-		return codSus;
+	public String getMedCard() {
+		return medcard;
 	}
 
-	public void setCodSus(String codSus) {
-		this.codSus = codSus;
+	public void setMedCard(String medcard) {
+		this.medcard = medcard;
 	}
 
 	public String getEmail() {
@@ -111,7 +111,7 @@ public class UserForm {
 		User user = new User();
 		user.setname(name);
 		user.setlast_name(last_name);
-		user.setCodSus(codSus);
+		user.setMedCard(medcard);
 		user.setCpf(cpf);
 		user.setAtivo(true);
 		user.setEmail(email);

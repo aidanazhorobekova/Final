@@ -35,13 +35,13 @@
 					</div>
 						
 					<div class="form-floating mb-3" style="text-align: left">
-						<input class="form-control shadow-nova" type="text" th:field="*{cpf}" minlength="15" maxlength="11" onkeypress="return onlynumber();" onblur="validarCPF(this)" required/>
+						<input class="form-control shadow-nova" type="text" th:field="*{cpf}" minlength="15" maxlength="11" onkeypress="return onlynumber();"/>
 						<label for="cpf">CPF</label>
 					</div>
 					
 					<div class="form-floating mb-3" style="text-align: left">
-						<input class="form-control shadow-nova" type="text" th:field="*{codSus}" minlength="15" maxlength="15" onkeypress="return onlynumber();" required/>
-						<label for="codSus">Cartão Nacional de Saúde</label>
+						<input class="form-control shadow-nova" type="text" th:field="*{medcard}" minlength="15" maxlength="15" onkeypress="return onlynumber();" required/>
+						<label for="medcard">Cartão Nacional de Saúde</label>
 					</div>
 							
 					<div class="form-floating mb-3" style="text-align: left">

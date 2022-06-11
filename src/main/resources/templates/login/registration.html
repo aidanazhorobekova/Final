@@ -6,7 +6,7 @@
 	
 		<nav class="bg-success p-2 mb-3" style="color: white">
 			<div class="text-center">
-				<a th:href="@{/home}" class="header-title">Delivery of MEDICINE<i class="fas fa-laptop-medical m-2 mt-0 mb-0"></i></a>
+				<a th:href="@{/home}" class="header-title">Delivery of MEDICINE</a>
 			</div>
 		</nav>
 		
@@ -30,13 +30,13 @@
 							
 						
 						<div class="form-floating mb-3" style="text-align: left">
-							<input class="form-control shadow-nova card-descricao" type="text" th:field="*{lastname}" name="cpf" th:errorclass="is-invalid" onkeypress="return apenasLetras();"/>
+							<input class="form-control shadow-nova card-descricao" type="text" th:field="*{last_name}" name="cpf" th:errorclass="is-invalid" onkeypress="return apenasLetras();"/>
 							<label for="last_name" >Last Name</label>
 							<div class="invalid-feedback" th:errors="*{last_name}"></div>
 						</div>
 							
 						<div class="form-floating mb-3" style="text-align: left">
-							<input class="form-control shadow-nova card-descricao" type="text" th:field="*{cpf}" name="last_name" th:errorclass="is-invalid" minlength="11" maxlength="11" onkeypress="return onlynumber();" onblur="validarCPF(this)"/>
+							<input class="form-control shadow-nova card-descricao" type="text" th:field="*{cpf}" name="last_name" th:errorclass="is-invalid" minlength="11" maxlength="11" onkeypress="return onlynumber();" />
 							<label for="cpf">CPF</label>	
 							<div class="invalid-feedback" th:errors="*{cpf}"></div>
 						</div>

@@ -66,16 +66,7 @@ function onlynumber(evt) {
 		        return false;
 		    return true;
 		}
-		
-		function validarCPF(el){
-			  if( !_cpf(el.value) ){
 
-			    alert("Invalid CPF! Re-enter");
-
-			    el.value = "";
-			  }
-			}
-		
 		function goBack() {
     window.history.back()
 }
